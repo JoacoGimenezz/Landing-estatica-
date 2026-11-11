@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Plano 8 es una productora audiovisual de ocho mujeres en Resistencia y Corrientes: cortometrajes, videoclips y documentales."><meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Plano 8 Productora">
+<meta property="og:title" content="Plano 8 — Productora audiovisual">
+<meta property="og:description" content="Ocho miradas en un mismo plano. Cortometrajes, videoclips y documentales desde Resistencia y Corrientes.">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://TU-DOMINIO.vercel.app/">
+<meta property="og:image" content="https://TU-DOMINIO.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plano 8 — Productora audiovisual">
+<meta name="twitter:description" content="Ocho miradas en un mismo plano. Cortometrajes, videoclips y documentales.">
+<meta name="twitter:image" content="https://TU-DOMINIO.vercel.app/og-image.jpg">
+<title>Plano 8 — Productora audiovisual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('nav-js')</script>
+<style>
+:root{
+  --black:#000; --bg:#17171a; --ink:#F5F2FA; --text:#D4CFDF; --muted:#A9A2B8; --violet:#A66BFF; --lilac:#C9B8FF;
+  --line:rgba(245,242,250,.16);
+  --display:'Italiana',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--black);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--lilac);outline-offset:3px;border-radius:6px}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px clamp(20px,4vw,64px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.6rem;line-height:1}
+.brand img{display:block;height:48px;width:auto}
+.nav{display:flex;gap:clamp(18px,3vw,40px);font-size:.95rem;color:var(--muted)}
+.nav a{padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nav a:hover{color:var(--ink);border-color:var(--violet)}
+.pill{padding:10px 22px;border-radius:999px;border:1px solid var(--lilac);font-weight:600;font-size:.92rem;transition:background .2s,color .2s}
+.pill:hover{background:var(--lilac);color:#17171a}
+
+/* Hero */
+.hero{display:flex;flex-direction:column;min-height:calc(100svh - 78px)}
+.stage{position:relative;flex:1;display:grid;place-items:center;overflow:hidden;min-height:340px}
+.glow{position:absolute;left:50%;top:50%;width:min(110vw,1100px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(130,60,230,.34),rgba(130,60,230,.10) 55%,transparent 75%)}
+.rings i{position:absolute;left:50%;top:50%;border:1px solid rgba(166,107,255,.28);border-radius:50%;transform:translate(-50%,-50%)}
+.rings i:nth-child(1){width:min(46vmin,520px);aspect-ratio:1}
+.rings i:nth-child(2){width:min(70vmin,780px);aspect-ratio:1;border-color:rgba(166,107,255,.18)}
+.rings i:nth-child(3){width:min(98vmin,1080px);aspect-ratio:1;border-color:rgba(166,107,255,.10)}
+.stage video{position:relative;width:min(100%,1240px);aspect-ratio:16/9;object-fit:cover;mix-blend-mode:screen;display:block}
+.tag{position:absolute;bottom:clamp(14px,4vh,40px);left:0;right:0;text-align:center;font-family:var(--display);font-size:clamp(1.1rem,2vw,1.6rem);color:var(--lilac);opacity:0;animation:fade 1.2s ease-out 4.6s forwards}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.tag{animation:none;opacity:1}}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:repeat(4,1fr);margin:0 clamp(20px,4vw,64px) clamp(20px,3vw,36px);border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);overflow:hidden}
+.cell{display:flex;align-items:center;gap:14px;min-width:0;padding:18px 22px;transition:background .25s}
+.cell+.cell{border-left:1px solid var(--line)}
+a.cell:hover{background:rgba(166,107,255,.14)}
+.ico{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,184,255,.45);transition:background .25s,border-color .25s}
+a.cell:hover .ico{background:var(--violet);border-color:var(--violet)}
+.ico svg{width:20px;height:20px;fill:none;stroke:var(--lilac);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+a.cell:hover .ico svg{stroke:#fff}
+.k{display:block;font-size:.8rem;color:var(--muted);line-height:1.3}
+.v{display:block;font-size:.95rem;font-weight:500;overflow-wrap:anywhere;line-height:1.35}
+
+/* Conocé más */
+.about{position:relative;overflow:hidden;background:linear-gradient(to bottom,#000 0,var(--bg) clamp(120px,18vw,260px))}
+.about::before{content:"";position:absolute;right:-12%;top:-20%;width:min(70vw,900px);aspect-ratio:1;background:radial-gradient(closest-side,rgba(130,60,230,.20),transparent 72%);pointer-events:none}
+.page{position:relative;max-width:1480px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,64px) clamp(40px,6vw,80px)}
+.top2{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.photo{position:relative;isolation:isolate;margin:0 16px 16px 0}
+.photo::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--violet);border-radius:12px;z-index:-1}
+.photo img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.badge{position:absolute;right:-8px;bottom:-34px;width:clamp(84px,9vw,116px);height:auto}
+.t{margin:0 0 24px;font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,4.4vw,4.2rem);line-height:1}
+.t span{display:block;color:var(--violet)}
+.lead{margin:0 0 16px;max-width:34rem;font-family:var(--display);font-size:clamp(1.3rem,1.9vw,1.75rem);line-height:1.3}
+.sub{margin:0 0 32px;max-width:32rem;color:var(--text)}
+.facts{display:flex;gap:clamp(28px,4vw,56px);padding-top:24px;border-top:1px solid var(--line);max-width:34rem}
+.facts div{display:flex;align-items:center;gap:14px}
+.facts b{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,4vw,3.6rem);line-height:1;color:var(--violet)}
+.facts span{font-size:.92rem;color:var(--text);line-height:1.3;max-width:9rem}
+.story{display:grid;grid-template-columns:1fr;margin-top:clamp(56px,7vw,96px);border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.03)}
+.story article{padding:clamp(26px,3vw,44px)}
+.story article{display:grid;grid-template-columns:minmax(170px,.4fr) minmax(0,1fr);column-gap:clamp(24px,4vw,64px);align-items:start}
+.story article+article{border-top:1px solid var(--line)}
+.lab{grid-column:1;grid-row:1/span 3;display:flex;align-items:center;gap:12px;margin:6px 0 14px;font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--violet)}
+.lab::before{content:"";width:28px;height:1px;background:var(--violet)}
+.st{margin:0 0 18px;font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,2.3vw,2.2rem);line-height:1.15}
+.story p{margin:0 0 .9em;color:var(--text);font-size:1rem;line-height:1.7}
+.cols{columns:2;column-gap:36px}
+.cols p{break-inside:avoid}
+.story article>:not(.lab){grid-column:2}
+.story .close{color:var(--lilac);font-weight:600}
+
+@media (max-width:1000px){
+  .nav{display:none}
+  .contact{grid-template-columns:1fr 1fr}
+  .cell:nth-child(3){border-left:0}
+  .cell:nth-child(n+3){border-top:1px solid var(--line)}
+  .top2{grid-template-columns:1fr}
+  .story article{grid-template-columns:1fr}
+  .story .lab{grid-row:auto}
+  .story article>:not(.lab){grid-column:1}
+}
+@media (max-width:700px){.stage video{width:190vw;max-width:none}}
+@media (max-width:640px){
+  .contact{grid-template-columns:1fr}
+  .cell+.cell{border-left:0;border-top:1px solid var(--line)}
+  .story{grid-template-columns:1fr}
+  .story article+article{border-left:0;border-top:1px solid var(--line)}
+  .cols{columns:1}
+  .facts{flex-direction:column;gap:18px}
+}
+/* Formatos */
+.formats{background:linear-gradient(to bottom,var(--bg) 0,#100c18 clamp(120px,18vw,260px))}
+.formats .page{max-width:1760px;padding-left:clamp(16px,2.5vw,40px);padding-right:clamp(16px,2.5vw,40px);padding-bottom:clamp(48px,6vw,88px)}
+.formats .kick{margin:0 0 10px;font-size:.95rem;color:var(--muted)}
+.formats .t{margin-bottom:clamp(32px,5vw,56px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,24px)}
+.card{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#0a0710}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(12,8,20,.92) 0%,rgba(12,8,20,.35) 45%,rgba(12,8,20,0) 70%)}
+.card:hover img{transform:scale(1.045)}
+.card .name{position:absolute;z-index:1;left:clamp(18px,2vw,28px);right:18px;bottom:clamp(18px,2vw,26px);display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.1}
+.card .go{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,184,255,.55);transition:background .25s,border-color .25s}
+.card .go svg{width:16px;height:16px;fill:none;stroke:var(--lilac);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+.card:hover .go{background:var(--violet);border-color:var(--violet)}
+.card:hover .go svg{stroke:#fff}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}.cards .card:last-child{grid-column:1/-1;aspect-ratio:16/8}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}.cards .card:last-child{aspect-ratio:4/3}}
+/* Animaciones */
+@media (prefers-reduced-motion:no-preference){
+  .contact{animation:rise .9s cubic-bezier(.2,.7,.2,1) .6s both}
+  .rings i{animation:breathe 9s ease-in-out infinite alternate}
+  .rings i:nth-child(2){animation-duration:12s;animation-delay:-3s}
+  .rings i:nth-child(3){animation-duration:15s;animation-delay:-6s}
+  .badge .spin{transform-box:view-box;transform-origin:60px 60px;animation:spin 30s linear infinite}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}}
+  @keyframes breathe{from{transform:translate(-50%,-50%) scale(1)}to{transform:translate(-50%,-50%) scale(1.045)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @supports (animation-timeline:view()){
+    .top2>div,.story article,.formats .kick,.formats .t,.project .t,.card{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+    .photo img,.film img{animation:unveil linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+    .card:nth-child(2){animation-range:entry 10% entry 70%}
+    .card:nth-child(3){animation-range:entry 20% entry 80%}
+    @keyframes reveal{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+    @keyframes unveil{from{clip-path:inset(0 0 100% 0);transform:scale(1.06)}to{clip-path:inset(0);transform:none}}
+  }
+}
+/* Último proyecto */
+.project{background:linear-gradient(to bottom,#100c18 0,#0a0710 clamp(120px,18vw,260px))}
+.project .page{max-width:1760px;padding-left:clamp(16px,2.5vw,40px);padding-right:clamp(16px,2.5vw,40px);padding-bottom:clamp(56px,7vw,100px)}
+.project .t{margin-bottom:clamp(24px,4vw,44px)}
+.film{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#0a0710}
+.film img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.film::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 30% 40% at 86% 50%,rgba(10,7,16,.9) 0,rgba(10,7,16,.78) 55%,rgba(10,7,16,0) 100%)}
+.sum{position:absolute;z-index:1;right:clamp(20px,3.5vw,56px);top:50%;transform:translateY(-50%);width:min(25%,400px)}
+.sum p{margin:0 0 24px;font-size:clamp(.86rem,1.05vw,1rem);line-height:1.7;color:var(--text)}
+.watch{display:inline-flex;align-items:center;gap:14px;font-weight:600;font-size:.95rem}
+.watch .play{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--violet);transition:transform .25s,background .25s}
+.watch:hover .play{transform:scale(1.08);background:#b78aff}
+.watch svg{width:16px;height:16px;fill:#fff;margin-left:2px}
+@media (max-width:900px){
+  .film::after{display:none}
+  .sum{position:static;transform:none;width:auto;padding:24px 22px 28px}
+}
+
+/* Quiénes somos */
+.team{background:linear-gradient(to bottom,#0a0710 0,var(--bg) clamp(120px,18vw,260px))}
+.team .page{max-width:1480px;padding-bottom:clamp(56px,7vw,100px)}
+.team .kick{margin:0 0 10px;font-size:.95rem;color:var(--muted)}
+.team .t{margin-bottom:clamp(32px,5vw,56px)}
+.members{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,3.5vw,52px) clamp(16px,2vw,32px)}
+.member{position:relative;display:block;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.mph{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line)}
+.mph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.member:hover .mph img,.member:focus-visible .mph img{transform:scale(1.04)}
+.mgo{position:absolute;right:0;bottom:0;display:grid;place-items:center;width:44px;height:44px;background:var(--lilac);opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s}
+.mgo svg{width:16px;height:16px;fill:none;stroke:#17171a;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.member:hover .mgo,.member:focus-visible .mgo{opacity:1;transform:none}
+.mnum{position:absolute;left:0;margin-top:20px;font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+.mname{display:block;padding:14px 0 0 clamp(32px,3vw,44px);font-family:var(--display);font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.15}
+.mrole{display:block;padding:6px 0 0 clamp(32px,3vw,44px);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+@media (max-width:900px){.members{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.members{grid-template-columns:1fr}}
+
+/* Ventana del integrante */
+.tm{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);background:rgba(6,4,10,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.tm.open{display:flex}
+body.tm-lock{overflow:hidden}
+.tm-box{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);width:min(1180px,100%);max-height:100%;background:var(--bg);border:1px solid rgba(166,107,255,.55);overflow:hidden}
+.tm-photo{position:relative;min-height:min(78vh,720px);background:#0a0710}
+.tm-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tm-body{display:flex;flex-direction:column;padding:clamp(28px,4vw,56px);overflow-y:auto;max-height:min(88vh,800px)}
+.tm-kick{margin:0 0 14px;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
+.tm-name{display:block;grid-row:auto;gap:0;color:var(--ink);margin:0 0 14px;font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5vw,4.4rem);line-height:.98}
+.tm-name::before{content:none}
+.tm-role{margin:0 0 26px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violet)}
+.tm-bio p{margin:0 0 14px;font-size:.95rem;line-height:1.85;color:var(--text)}
+.tm-contact{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin:10px 0 28px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lilac)}
+.tm-contact svg,.tm-nav svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tm-contact:hover{color:#fff}
+.tm-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+.tm-bio{margin-bottom:28px}
+.tm-nav{display:inline-flex;align-items:center;gap:8px;padding:6px 0;border:0;background:none;color:var(--ink);font:inherit;font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:color .2s}
+.tm-nav:hover{color:var(--lilac)}
+.tm-count{font-size:.8rem;color:var(--muted);letter-spacing:.08em}
+.tm-x{position:absolute;top:16px;right:16px;z-index:2;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,184,255,.55);background:rgba(23,23,26,.7);color:var(--ink);cursor:pointer;transition:background .25s,border-color .25s}
+.tm-x svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.tm-x:hover{background:var(--violet);border-color:var(--violet)}
+@media (max-width:820px){
+  .tm{padding:0;align-items:stretch}
+  .tm-box{grid-template-columns:1fr;grid-template-rows:auto 1fr;width:100%;max-height:none;border:0;overflow-y:auto}
+  .tm-photo{min-height:0;height:62vw;max-height:420px}
+  .tm-body{max-height:none;overflow:visible}
+}
+@media (prefers-reduced-motion:no-preference){
+  .tm.open .tm-box{animation:tmin .35s cubic-bezier(.2,.7,.2,1)}
+  @keyframes tmin{from{opacity:0;transform:translateY(18px) scale(.985)}}
+  @supports (animation-timeline:view()){
+    .team .kick,.team .t,.member{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+  }
+}
+
+/* Footer */
+.foot{position:relative;overflow:hidden;background:linear-gradient(to bottom,var(--bg) 0,#0a0710 clamp(120px,18vw,260px))}
+.foot::before{content:"";position:absolute;left:-15%;bottom:-25%;width:min(70vw,900px);aspect-ratio:1;background:radial-gradient(closest-side,rgba(130,60,230,.20),transparent 72%);pointer-events:none}
+.foot .page{max-width:1480px;padding-bottom:clamp(32px,4vw,56px)}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.foot-photo{position:relative;isolation:isolate;margin:0 16px 16px 0}
+.foot-photo::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--violet);border-radius:12px;z-index:-1}
+.foot-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 38%;border-radius:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.foot .kick{margin:0 0 10px;font-size:.95rem;color:var(--muted)}
+.foot .t{margin-bottom:18px}
+.foot .lead2{margin:0 0 28px;max-width:30rem;color:var(--text)}
+.fcontact{grid-template-columns:1fr;margin:0}
+.fcontact .cell+.cell{border-left:0;border-top:1px solid var(--line)}
+.foot-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.foot-bar img{display:block;height:40px;width:auto}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr}.foot-photo{margin-right:12px}}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .foot .kick,.foot .t,.foot .lead2,.fcontact{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+  }
+}
+
+/* ===== Mejoras ===== */
+html{font-size:clamp(16px,15px + .2vw,18px);scrollbar-gutter:stable;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 88px)}
+::selection{background:var(--violet);color:#fff}
+.t,.st,.lead,.tag{text-wrap:balance}
+p{text-wrap:pretty}
+.story p{hyphens:auto}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;padding:10px 18px;border-radius:999px;background:var(--lilac);color:#17171a;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+.tag{margin:0;font-weight:400;font-size:clamp(1.3rem,2.4vw,2rem)}
+/* Header fijo con vidrio */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);transition:padding .3s,border-color .3s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.top.sc{padding-top:8px;padding-bottom:8px;border-color:transparent}
+.brand img{transition:height .3s}
+.top.sc .brand img{height:38px}
+.nav a{position:relative;border:0;padding:8px 0;font-size:1rem}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--violet);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.nav a:hover,.nav a[aria-current]{color:var(--ink)}
+.nav a:hover::after,.nav a[aria-current]::after{transform:scaleX(1)}
+.pill{transition:background .25s,color .25s,transform .2s,box-shadow .3s}
+.pill:hover{box-shadow:0 10px 30px -12px rgba(166,107,255,.8)}
+/* Escala tipográfica: nada por debajo de ~13px */
+.k{font-size:.85rem}.v,.facts span{font-size:1rem}
+.lab{font-size:1.5rem}
+.mnum{font-size:.82rem}
+.mrole,.tm-role{font-size:.8rem;letter-spacing:.1em}
+.tm-kick,.tm-contact,.tm-nav{font-size:.8rem;letter-spacing:.1em}
+.formats .kick,.team .kick,.foot .kick{font-size:1rem}
+.sum p{font-size:clamp(.95rem,1.1vw,1.05rem)}
+.tm-bio p{font-size:1.02rem;line-height:1.75}
+.tm-nav{min-height:44px}
+/* Tarjetas */
+.card{transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .5s}
+.card:hover,.card:focus-visible{transform:translateY(-5px);border-color:rgba(166,107,255,.65);box-shadow:0 26px 50px -26px rgba(130,60,230,.6)}
+.card .go{transition:background .25s,border-color .25s,transform .35s cubic-bezier(.2,.7,.2,1)}
+.card:hover .go{transform:translateX(5px)}
+.pill:active,.watch:active,.card:active{transform:scale(.97)}
+/* Aparición: una vez, con easing, escalonada */
+html.js [data-r]{opacity:0;translate:0 28px;transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),translate .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .5s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .5s}
+html.js [data-r].in{opacity:1;translate:none}
+[data-r]{animation:none!important}
+@media (prefers-reduced-motion:no-preference){.tm.open{animation:tmfade .3s ease}@keyframes tmfade{from{opacity:0}}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:1100px){.film::after{display:none}.sum{position:static;transform:none;width:auto;padding:24px 22px 28px}}
+@media (max-width:1000px){
+  .top{position:static;flex-wrap:wrap;row-gap:6px}
+  body::before{display:none}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px)}
+  .hero{min-height:calc(100vh - var(--hh,100px));min-height:calc(100svh - var(--hh,100px))}
+  .top,.top.sc{padding:10px clamp(20px,4vw,64px) 6px}
+  .top .brand img,.top.sc .brand img{height:40px}
+  .nav a{padding:6px 0}
+  /* Sin JavaScript: los links se acomodan en filas, sin scroll lateral */
+  .nav{display:flex;flex-wrap:wrap;order:3;width:100%;gap:0 24px;overflow:visible;padding-bottom:4px}
+  .nav a{white-space:nowrap}
+}
+@media (max-width:640px){
+  .hero .stage{min-height:200px}
+  .hero .contact{margin-bottom:16px}
+  .hero .cell{padding:8px 14px;gap:12px}
+  .hero .ico{width:34px;height:34px}
+  .hero .ico svg{width:16px;height:16px}
+  .tag{bottom:12px;font-size:clamp(1rem,4.6vw,1.2rem)}
+}
+@media (max-width:700px){
+  .stage video{position:absolute;left:50%;top:50%;width:180vw;max-width:none;transform:translate(-48.4%,-47.6%)}
+}
+
+/* ===== Menú móvil: botón + pantalla completa ===== */
+.burger,.nav-bar,.nav-foot,.nav .n,.nav .ar{display:none}
+@media (max-width:1000px){
+  html.nav-js .top{flex-wrap:nowrap;gap:10px;-webkit-backdrop-filter:none;backdrop-filter:none}
+  html.nav-js .pill{margin-left:auto}
+  /* Botón del menú */
+  html.nav-js .burger{display:grid;justify-items:start;align-content:center;gap:6px;flex:none;width:44px;height:44px;padding:0 13px;border-radius:50%;border:1px solid rgba(201,184,255,.6);background:none;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .25s,border-color .25s}
+  html.nav-js .burger span{display:block;width:18px;height:1.5px;border-radius:2px;background:currentColor;transition:width .3s cubic-bezier(.2,.7,.2,1)}
+  html.nav-js .burger span+span{width:11px;justify-self:end}
+  html.nav-js .burger:hover,html.nav-js .burger:active{background:rgba(166,107,255,.16);border-color:var(--lilac)}
+  html.nav-js .burger:hover span+span,html.nav-js .burger:active span+span{width:18px}
+  /* Pantalla completa */
+  html.menu-open{overflow:hidden}
+  html.nav-js .nav{position:fixed;inset:0;z-index:90;display:flex;flex-direction:column;flex-wrap:nowrap;order:0;width:auto;gap:0;overflow:hidden auto;overscroll-behavior:contain;
+    padding:max(12px,env(safe-area-inset-top)) clamp(20px,4vw,64px) max(22px,env(safe-area-inset-bottom));
+    background:radial-gradient(90% 46% at 50% 0%,rgba(130,60,230,.32),transparent 72%),radial-gradient(80% 42% at 100% 100%,rgba(130,60,230,.20),transparent 72%),#000;
+    opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+  html.menu-open .nav{opacity:1;visibility:visible;transition:opacity .35s ease,visibility 0s}
+  /* Arcos que nacen de la esquina inferior, como los anillos de la portada */
+  html.nav-js .nav::before,html.nav-js .nav::after{content:"";position:fixed;z-index:-1;left:100%;top:100%;border:1px solid rgba(166,107,255,.16);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
+  html.nav-js .nav::before{width:min(130vw,980px);aspect-ratio:1}
+  html.nav-js .nav::after{width:min(84vw,640px);aspect-ratio:1;border-color:rgba(166,107,255,.28)}
+  /* Barra superior de la pantalla */
+  html.nav-js .nav-bar{display:flex;align-items:center;justify-content:space-between;min-height:48px;margin-bottom:clamp(16px,4.5vh,40px)}
+  html.nav-js .nav-brand{font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--ink)}
+  html.nav-js .nav-close{display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid rgba(201,184,255,.45);background:none;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .25s,border-color .25s,transform .4s cubic-bezier(.2,.7,.2,1)}
+  html.nav-js .nav-close svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+  html.nav-js .nav-close:hover,html.nav-js .nav-close:active{background:rgba(166,107,255,.16);border-color:var(--lilac);transform:rotate(90deg)}
+  /* Links: número · nombre · flecha */
+  html.nav-js .nav a:not(.nav-cta){display:flex;align-items:center;gap:16px;padding:clamp(15px,2.6vh,24px) 0;border:0;border-bottom:1px solid var(--line);color:var(--ink);white-space:normal}
+  html.nav-js .nav-bar+a{border-top:1px solid var(--line)}
+  html.nav-js .nav a::after{display:none}
+  html.nav-js .nav .n{display:block;flex:none;width:2.2ch;font:500 .78rem/1 var(--sans);font-style:normal;letter-spacing:.14em;color:var(--violet);font-variant-numeric:tabular-nums}
+  html.nav-js .nav .l{flex:1;min-width:0;font-family:var(--display);font-size:clamp(1.6rem,7.4vw,2.4rem);line-height:1.12;text-wrap:balance}
+  html.nav-js .nav .ar{display:block;flex:none;width:22px;height:22px;fill:none;stroke:var(--lilac);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.65;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s}
+  html.nav-js .nav a:not(.nav-cta):hover .ar,html.nav-js .nav a:not(.nav-cta):active .ar{transform:translateX(5px);opacity:1}
+  html.nav-js .nav a:not(.nav-cta):active{background:linear-gradient(90deg,rgba(166,107,255,.16),transparent 80%)}
+  html.nav-js .nav a[aria-current] .l{color:var(--lilac)}
+  /* Pie: botón y lugar */
+  html.nav-js .nav-foot{display:flex;flex-direction:column;gap:16px;margin-top:auto;padding-top:clamp(24px,5vh,44px)}
+  html.nav-js .nav a.nav-cta,html.nav-js .nav a.nav-cta:hover{display:block;padding:15px 22px;border-radius:999px;background:var(--lilac);color:#17171a;text-align:center;font-weight:600;font-size:1rem;box-shadow:0 14px 34px -14px rgba(166,107,255,.85)}
+  html.nav-js .nav a.nav-cta:active{transform:scale(.98)}
+  html.nav-js .nav-foot small{display:block;text-align:center;color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+  /* Entrada escalonada */
+  html.nav-js .nav-bar,html.nav-js .nav>a,html.nav-js .nav-foot{opacity:0;transform:translateY(14px);transition:opacity .2s ease,transform .2s ease,background .25s}
+  html.nav-js .nav>a:nth-of-type(1){--i:1}html.nav-js .nav>a:nth-of-type(2){--i:2}html.nav-js .nav>a:nth-of-type(3){--i:3}html.nav-js .nav>a:nth-of-type(4){--i:4}html.nav-js .nav-foot{--i:5}
+  html.menu-open .nav-bar,html.menu-open .nav>a,html.menu-open .nav-foot{opacity:1;transform:none;transition:opacity .5s ease calc(.1s + var(--i,0)*.07s),transform .65s cubic-bezier(.2,.7,.2,1) calc(.1s + var(--i,0)*.07s),background .25s}
+}
+@media (min-width:700px) and (max-width:1000px) and (min-height:600px){
+  html.nav-js .nav>a,html.nav-js .nav-foot{width:100%;max-width:640px;align-self:center}
+}
+@media (max-width:1000px) and (max-height:520px){
+  html.nav-js .nav-bar{margin-bottom:8px}
+  html.nav-js .nav a:not(.nav-cta){padding:10px 0}
+  html.nav-js .nav .l{font-size:1.4rem}
+}
+@media (max-width:1000px) and (prefers-reduced-motion:reduce){
+  html.nav-js .nav-bar,html.nav-js .nav>a,html.nav-js .nav-foot{transform:none!important;transition:opacity .2s ease!important}
+  html.nav-js .nav-close:hover,html.nav-js .nav-close:active{transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="top">
+  <a class="brand" href="#" aria-label="Plano 8 Productora, inicio"><img src="assets/img/logo.png" alt="Plano 8 Productora"></a>
+  <nav class="nav" id="menu" aria-label="Principal">
+    <div class="nav-bar">
+      <span class="nav-brand" aria-hidden="true">Plano 8</span>
+      <button class="nav-close" type="button" aria-label="Cerrar menú"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+    </div>
+    <a href="#conoce"><i class="n" aria-hidden="true">01</i><span class="l">Conocé más de nosotras</span><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#formatos"><i class="n" aria-hidden="true">02</i><span class="l">Formatos de trabajo</span><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#proyecto"><i class="n" aria-hidden="true">03</i><span class="l">Hasta llegar a casa</span><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#quienes-somos"><i class="n" aria-hidden="true">04</i><span class="l">Quiénes somos</span><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="nav-foot">
+      <a class="nav-cta" href="#contacto">Hablemos</a>
+      <small>Resistencia · Corrientes</small>
+    </div>
+  </nav>
+  <a class="pill" href="#contacto">Hablemos</a>
+  <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="stage">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+    <video autoplay muted playsinline preload="auto" aria-label="Logo animado de Plano 8 Productora" src="assets/video/logo-animado.mp4"></video>
+    <h1 class="tag">Ocho miradas en un mismo plano</h1>
+  </div>
+
+  <div class="contact" id="contacto">
+    <a class="cell" href="mailto:plano8producciones@gmail.com">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+      <span><span class="k">Email</span><span class="v">plano8producciones@gmail.com</span></span>
+    </a>
+    <a class="cell" href="https://www.instagram.com/plano8.productora?igsh=MmkyMWUxY3hlc211" target="_blank" rel="noopener noreferrer">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></span>
+      <span><span class="k">Instagram</span><span class="v">@plano8.productora</span></span>
+    </a>
+    <a class="cell" href="https://www.tiktok.com/@plano8.productora?_r=1&amp;_t=ZS-95l4msXTuBL" target="_blank" rel="noopener noreferrer">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.3 2.6 1.9 4.2 4.6 4.5"/></svg></span>
+      <span><span class="k">TikTok</span><span class="v">@plano8.productora</span></span>
+    </a>
+    <div class="cell">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <span><span class="k">Ubicación</span><span class="v">Resistencia y Corrientes</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="conoce">
+  <div class="page">
+    <div class="top2">
+      <figure class="photo">
+        <img src="assets/img/equipo.jpg" alt="Las ocho integrantes de Plano 8 juntas, en blanco y negro sobre fondo violeta">
+        <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#C9B8FF"/><defs><path id="arco" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs><g class="spin"><text font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#17171a"><textPath href="#arco" textLength="266" lengthAdjust="spacing">hecho por nosotras · hecho por nosotras ·</textPath></text></g><text x="60" y="76" text-anchor="middle" font-family="Italiana,serif" font-size="46" fill="#17171a">8</text></svg>
+      </figure>
+      <div>
+        <h2 class="t">Conocé más <span>de nosotras</span></h2>
+        <p class="lead">Creamos contenido audiovisual profesional, con calidad estética y enfoque estratégico para destacar tu marca o proyecto.</p>
+        <p class="sub">Trabajamos de forma ágil y creativa para lograr piezas impactantes, auténticas y memorables. Contratá nuestros servicios y llevá tu idea al siguiente nivel.</p>
+        <div class="facts">
+          <div><b>8</b><span>integrantes</span></div>
+          <div><b>100%</b><span>producciones hechas por mujeres</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story">
+      <article>
+        <h3 class="lab">Nuestros inicios</h3>
+        <h4 class="st">De la facultad a la productora.</h4>
+        <div class="cols">
+          <p>Plano 8 nace en el ámbito de la Facultad de Artes, Diseño y Ciencias de la Cultura de la UNNE, en el marco de la materia Seminario II. Lo que comenzó como un espacio académico de exploración y aprendizaje, pronto se transformó en un proyecto colectivo con una visión clara: crear, producir y contar historias desde una mirada propia.</p>
+          <p>Somos ocho mujeres que decidimos unir nuestras ideas, sensibilidades y perspectivas para dar vida a una productora audiovisual comprometida con la originalidad y la creatividad. Cada proyecto que desarrollamos es el resultado de un trabajo colaborativo, donde la diversidad de miradas se convierte en nuestra mayor fortaleza.</p>
+          <p>En Plano 8 buscamos impulsar y visibilizar producciones realizadas 100% por mujeres, apostando a narrativas auténticas, innovadoras y con identidad. Creemos en el poder del audiovisual como herramienta de expresión, transformación y construcción de nuevas formas de contar.</p>
+          <p class="close">¡Este es solo el comienzo!</p>
+        </div>
+      </article>
+      <article>
+        <h3 class="lab">Nuestra misión</h3>
+        <h4 class="st">Dar visibilidad a producciones realizadas por mujeres.</h4>
+        <p>Crear proyectos audiovisuales auténticos que reflejan realidades diversas.</p>
+      </article>
+      <article>
+        <h3 class="lab">Nuestra visión</h3>
+        <h4 class="st">Consolidarnos como una productora que impulse nuevas miradas.</h4>
+        <p>Llevar historias reales a la pantalla y generar impacto en la industria.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="formats" id="formatos">
+  <div class="page">
+    <p class="kick">Qué hacemos</p>
+    <h2 class="t">Formatos de <span>trabajo</span></h2>
+    <div class="cards">
+      <a class="card" href="#footer"><img src="assets/img/formato-cortometraje.jpg" alt="Operador de cámara con auriculares durante un rodaje"><span class="name">Cortometraje<span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="card" href="#footer"><img src="assets/img/formato-videoclip.jpg" alt="Tres personas en una parada de colectivo de noche"><span class="name">Videoclip<span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="card" href="#footer"><img src="assets/img/formato-documental.jpg" alt="Equipo de rodaje con cámaras sobre un techo"><span class="name">Documental<span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="project" id="proyecto">
+  <div class="page">
+    <h2 class="t">Último <span>proyecto</span></h2>
+    <div class="film">
+      <img src="assets/img/hasta-llegar-a-casa-afiche.jpg" alt="Afiche de Hasta llegar a casa: cuatro amigas sentadas en una parada de colectivo de noche">
+      <div class="sum">
+        <p>Mora (19) y sus amigas Clara (20), Delfina (20) y Brenda (22) viven una situación incómoda con Sebastián (34), un hombre extraño y violento dentro del bar. Esperando el colectivo para volver a casa, Sebastián reaparece acercándose desde lejos. Aunque el colectivo llega justo a tiempo, las protagonistas quedan atravesadas por la incertidumbre y el miedo de lo que podría haber sucedido.</p>
+        <a class="watch" href="https://drive.google.com/file/d/1TqGKEguegrqjMZcz3dR3OSocYTTGFuD_/view" target="_blank" rel="noopener noreferrer"><span class="play"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 1l11 6-11 6z"/></svg></span>Ver proyecto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="team" id="quienes-somos">
+  <div class="page">
+    <p class="kick">El equipo</p>
+    <h2 class="t">Quiénes <span>somos</span></h2>
+    <div class="members">
+      <button class="member" type="button" data-i="0" aria-label="Conocer a Valentina Proietto, Dirección">
+        <span class="mph"><img src="assets/img/integrante-valentina-proietto.jpg" alt="Valentina Proietto" style="object-position:50% 28%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">01</span>
+        <span class="mname">Valentina Proietto</span>
+        <span class="mrole">Dirección</span>
+      </button>
+      <button class="member" type="button" data-i="1" aria-label="Conocer a Suray Ramirez, Producción">
+        <span class="mph"><img src="assets/img/integrante-suray-ramirez.jpg" alt="Suray Ramirez" style="object-position:38% 40%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">02</span>
+        <span class="mname">Suray Ramirez</span>
+        <span class="mrole">Producción</span>
+      </button>
+      <button class="member" type="button" data-i="2" aria-label="Conocer a Itza Castillo, Asistente de dirección">
+        <span class="mph"><img src="assets/img/integrante-itza-castillo.jpg" alt="Itza Castillo" style="object-position:50% 35%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">03</span>
+        <span class="mname">Itza Castillo</span>
+        <span class="mrole">Asistente de dirección</span>
+      </button>
+      <button class="member" type="button" data-i="3" aria-label="Conocer a Naiara Ortega, Asistente de producción">
+        <span class="mph"><img src="assets/img/integrante-naiara-ortega.jpg" alt="Naiara Ortega" style="object-position:50% 25%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">04</span>
+        <span class="mname">Naiara Ortega</span>
+        <span class="mrole">Asistente de producción</span>
+      </button>
+      <button class="member" type="button" data-i="4" aria-label="Conocer a Lourdes Maidana, Dirección de fotografía">
+        <span class="mph"><img src="assets/img/integrante-lourdes-maidana.jpg" alt="Lourdes Maidana" style="object-position:42% 40%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">05</span>
+        <span class="mname">Lourdes Maidana</span>
+        <span class="mrole">Dirección de fotografía</span>
+      </button>
+      <button class="member" type="button" data-i="5" aria-label="Conocer a Tisiana Tosolini, Dirección de arte">
+        <span class="mph"><img src="assets/img/integrante-tisiana-tosolini.jpg" alt="Tisiana Tosolini" style="object-position:62% 38%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">06</span>
+        <span class="mname">Tisiana Tosolini</span>
+        <span class="mrole">Dirección de arte</span>
+      </button>
+      <button class="member" type="button" data-i="6" aria-label="Conocer a Valentina Ruiz Díaz, Sonido">
+        <span class="mph"><img src="assets/img/integrante-valentina-ruiz-diaz.jpg" alt="Valentina Ruiz Díaz" style="object-position:50% 30%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">07</span>
+        <span class="mname">Valentina Ruiz Díaz</span>
+        <span class="mrole">Sonido</span>
+      </button>
+      <button class="member" type="button" data-i="7" aria-label="Conocer a Liz Tania Torres, Montaje">
+        <span class="mph"><img src="assets/img/integrante-liz-tania-torres.jpg" alt="Liz Tania Torres" style="object-position:50% 35%" loading="lazy"><span class="mgo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span>
+        <span class="mnum">08</span>
+        <span class="mname">Liz Tania Torres</span>
+        <span class="mrole">Montaje</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<footer class="foot" id="footer">
+  <div class="page">
+    <div class="foot-grid">
+      <figure class="foot-photo" style="margin-block:0 16px"><img src="assets/img/premio-feria-pitching.jpg" alt="El equipo de Plano 8 frente a la Facultad de Artes, Diseño y Ciencias de la Cultura (UNNE), con el premio del segundo puesto de la Feria de Pitching" loading="lazy"></figure>
+      <div>
+        <p class="kick">Contacto</p>
+        <h2 class="t">Hagamos algo <span>juntas</span></h2>
+        <p class="lead2">Escribinos o seguinos en redes: nos encanta conocer nuevas historias para contar.</p>
+        <div class="contact fcontact">
+    <a class="cell" href="mailto:plano8producciones@gmail.com">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+      <span><span class="k">Email</span><span class="v">plano8producciones@gmail.com</span></span>
+    </a>
+    <a class="cell" href="https://www.instagram.com/plano8.productora?igsh=MmkyMWUxY3hlc211" target="_blank" rel="noopener noreferrer">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></span>
+      <span><span class="k">Instagram</span><span class="v">@plano8.productora</span></span>
+    </a>
+    <a class="cell" href="https://www.tiktok.com/@plano8.productora?_r=1&amp;_t=ZS-95l4msXTuBL" target="_blank" rel="noopener noreferrer">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.3 2.6 1.9 4.2 4.6 4.5"/></svg></span>
+      <span><span class="k">TikTok</span><span class="v">@plano8.productora</span></span>
+    </a>
+    <div class="cell">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <span><span class="k">Ubicación</span><span class="v">Resistencia y Corrientes</span></span>
+    </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <img src="assets/img/logo.png" alt="Plano 8 Productora">
+      <span>© 2026 Plano 8 Productora audiovisual · Resistencia y Corrientes</span>
+    </div>
+  </div>
+</footer>
+
+<div class="tm" id="tm" role="dialog" aria-modal="true" aria-labelledby="tm-name" hidden>
+  <div class="tm-box">
+    <button class="tm-x" type="button" aria-label="Cerrar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+    <div class="tm-photo"><img id="tm-img" alt=""></div>
+    <div class="tm-body">
+      <p class="tm-kick">Conocé al equipo</p>
+      <h2 class="tm-name" id="tm-name"></h2>
+      <p class="tm-role" id="tm-role"></p>
+      <div class="tm-bio" id="tm-bio"></div>
+      <a class="tm-contact" href="mailto:plano8producciones@gmail.com">Contactar <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <div class="tm-foot">
+        <button class="tm-nav" type="button" data-dir="-1"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>Anterior</button>
+        <span class="tm-count" id="tm-count"></span>
+        <button class="tm-nav" type="button" data-dir="1">Siguiente<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var team=[{"name": "Valentina Proietto", "role": "Dirección", "bio": ["Nació en Corrientes Capital, actualmente cursa la carrera de Diseño, Imagen, Sonido y Multimedia en la Universidad Nacional del Nordeste, en Resistencia, Chaco.", "Su interés por el área audiovisual la llevó a desarrollarse en fotografía y edición de video, realizando producciones fotográficas y contenidos para eventos. En 2025 formó parte del equipo técnico del corto documental “Sobreviví” como sonidista y se desempeñó como productora en el videoclip musical “El Forastero – La Estación”."], "pos": "50% 28%"}, {"name": "Suray Ramirez", "role": "Producción", "bio": ["Nació el 29 de julio de 2004 y se recibió del Instituto Superior de Música con bachiller en música y audiovisuales.", "Actualmente es estudiante de la Tecnicatura en Diseño de Imagen, Sonido y Multimedia en la UNNE. En 2025 desempeñó el rol de dirección, producción y montaje en el documental “Diferente” y roles secundarios de iluminación en el videoclip “El Forastero” y en el cortometraje de ficción “La Lámpara Rota”."], "pos": "38% 40%"}, {"name": "Itza Castillo", "role": "Asistente de dirección", "bio": ["Nació en Corrientes Capital, el 19 de noviembre de 2005. Es técnica en producción agropecuaria, aunque desde muy chica mostró un gran interés por el mundo audiovisual, principalmente la fotografía.", "Con el objetivo de transformar esa pasión en una formación profesional, en 2025 comenzó la tecnicatura en Diseño de Imagen, Sonido y Multimedia y la Licenciatura en Artes Combinadas, ambas carreras dictadas en la Facultad de Artes, Diseño y Ciencias de la Cultura, en Resistencia, Chaco. Fue productora del documental de la EFA “Un foco de oportunidades” y formó parte del videoclip “Crazy Love” como asistente de dirección."], "pos": "50% 35%"}, {"name": "Naiara Ortega", "role": "Asistente de producción", "bio": ["Nació en Resistencia, Chaco. Actualmente estudia la Tecnicatura en Diseño de Imagen, Sonido y Multimedia en la Facultad de Artes, Diseño y Ciencias de la Cultura.", "Desde sus primeros años se vinculó con el teatro y el circo teatral, y participó como actriz en diversas producciones cinematográficas, experiencias que despertaron su interés por el trabajo audiovisual. A partir de ello comenzó a formarse y a trabajar en proyectos de cine y producción multimedia.", "Durante su formación integró distintos proyectos académicos y audiovisuales: cámara en el documental “Sobreviví”, producción en el videoclip “Crazy Love” y dirección de cámara y de actores en el cortometraje de ficción “La Lámpara Rota”."], "pos": "50% 25%"}, {"name": "Lourdes Maidana", "role": "Dirección de fotografía", "bio": ["Ana Lourdes Soledad Maidana nació el 3 de enero de 2001 en Resistencia, Chaco. Desde chica sintió una fuerte atracción por el mundo audiovisual y creativo.", "Actualmente cursa la Tecnicatura en Diseño de Imagen y Sonido Multimedia en la FADyCC. En 2025 comenzó a desarrollar roles clave en proyectos audiovisuales, desempeñándose como directora, directora de arte y montajista en piezas como un documental, un videoclip y un cortometraje de ficción."], "pos": "42% 40%"}, {"name": "Tisiana Tosolini", "role": "Dirección de arte", "bio": ["Tisiana del Valle Tosolini de Pompert nació el 21 de noviembre de 2006 en San Miguel, Corrientes, y actualmente cursa la Tecnicatura en Diseño de Imagen, Sonido y Multimedia en la Facultad de Artes, Diseño y Ciencias de la Cultura.", "Durante su formación trabajó en distintos proyectos audiovisuales como directora y guionista en un corto documental, directora de fotografía en un videoclip y productora en un corto de ficción, experiencias que le permitieron desarrollar una mirada integral sobre el trabajo audiovisual y el trabajo en equipo."], "pos": "62% 38%"}, {"name": "Valentina Ruiz Díaz", "role": "Sonido", "bio": ["Valentina Clara Ruiz Díaz nació en Resistencia, Chaco, el 22 de junio de 2007. Actualmente cursa la Tecnicatura en Diseño de Imagen, Sonido y Multimedia en la Universidad Nacional del Nordeste.", "Desde que era pequeña se sintió atraída por el mundo audiovisual: las fotografías, la edición de video, el gusto por el cine, el sonido y la creación de contenidos. Durante su formación participó en “Sobreviví”, un documental en el que fue sonidista, y en “El Forastero – La Estación”, un videoclip musical en el que fue camarógrafa. Sigue explorando distintas áreas del trabajo audiovisual y fortaleciendo su interés por la narrativa sonora."], "pos": "50% 30%"}, {"name": "Liz Tania Torres", "role": "Montaje", "bio": ["Nació en la ciudad de Resistencia. Tiene 20 años y actualmente cursa la carrera de Diseño de Imagen, Sonido y Multimedia en la Universidad Nacional del Nordeste.", "Desde hace tres años se desarrolla dentro del área audiovisual, especialmente en el ámbito de la edición y el montaje, con interés en la postproducción y en la construcción sonora de las escenas.", "Participó en distintos proyectos universitarios, entre ellos el videoclip “Crazy Love”, un documental sobre la EFA (Escuela de Formación Agrícola) y un cortometraje académico. Actualmente se desempeña en el área de Montaje de la productora Plano 8, buscando transmitir sensaciones y fortalecer el mensaje de cada proyecto desde la edición y la construcción narrativa."], "pos": "50% 35%"}];
+  var m=document.getElementById('tm'),img=document.getElementById('tm-img'),
+      nm=document.getElementById('tm-name'),rl=document.getElementById('tm-role'),
+      bio=document.getElementById('tm-bio'),ct=document.getElementById('tm-count'),
+      cards=document.querySelectorAll('.member'),cur=0,last=null;
+  function pad(n){return (n<10?'0':'')+n}
+  function show(i){
+    cur=(i+team.length)%team.length;
+    var t=team[cur];
+    img.src=cards[cur].querySelector('img').src;
+    img.alt=t.name; img.style.objectPosition=t.pos;
+    nm.textContent=t.name; rl.textContent=t.role;
+    bio.innerHTML=''; t.bio.forEach(function(p){var e=document.createElement('p');e.textContent=p;bio.appendChild(e)});
+    ct.textContent=pad(cur+1)+' / '+pad(team.length);
+    m.querySelector('.tm-body').scrollTop=0;
+  }
+  function open(i){last=document.activeElement;show(i);m.hidden=false;m.classList.add('open');document.body.classList.add('tm-lock');m.querySelector('.tm-x').focus()}
+  function close(){m.classList.remove('open');m.hidden=true;document.body.classList.remove('tm-lock');if(last)last.focus()}
+  cards.forEach(function(c,i){c.addEventListener('click',function(){open(i)})});
+  m.querySelector('.tm-x').addEventListener('click',close);
+  m.querySelectorAll('.tm-nav').forEach(function(b){b.addEventListener('click',function(){show(cur+parseInt(b.dataset.dir,10))})});
+  m.addEventListener('click',function(e){if(e.target===m)close()});
+  document.addEventListener('keydown',function(e){
+    if(m.hidden)return;
+    if(e.key==='Escape')close();
+    else if(e.key==='ArrowRight')show(cur+1);
+    else if(e.key==='ArrowLeft')show(cur-1);
+  });
+})();
+</script>
+
+<script>
+(function(){
+var d=document,h=d.documentElement,t=d.querySelector('.top'),
+L=[].slice.call(d.querySelectorAll('.nav a:not(.nav-cta)')),S=L.map(function(a){return d.querySelector(a.getAttribute('href'))});
+if('IntersectionObserver' in window){
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;L.forEach(function(a,i){S[i]===e.target?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current')})})},{rootMargin:'-45% 0px -50% 0px'});
+  S.forEach(function(x){x&&so.observe(x)});
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    h.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    d.querySelectorAll('.top2>div,.story article,.kick,.t,.card,.member,.sum,.foot-grid>div,.lead2').forEach(function(el){el.style.setProperty('--d',([].indexOf.call(el.parentNode.children,el)%4)*90+'ms');el.setAttribute('data-r','');io.observe(el)});
+  }
+}
+if(window.ResizeObserver)new ResizeObserver(function(){h.style.setProperty('--hh',t.offsetHeight+'px')}).observe(t);
+function sc(){t.classList.toggle('sc',scrollY>24);if(scrollY<160)L.forEach(function(a){a.removeAttribute('aria-current')})}
+addEventListener('scroll',sc,{passive:true});sc();
+var m=d.getElementById('tm');
+d.addEventListener('keydown',function(e){if(e.key!=='Tab'||m.hidden)return;var f=m.querySelectorAll('button,a[href]'),a=f[0],z=f[f.length-1],c=d.activeElement;if(e.shiftKey&&c===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&c===z){e.preventDefault();a.focus()}});
+})();
+</script>
+
+<script>
+/* Menú móvil: abrir/cerrar pantalla completa */
+(function(){
+var d=document,h=d.documentElement,b=d.querySelector('.burger'),n=d.getElementById('menu');
+if(!b||!n)return;
+var c=n.querySelector('.nav-close'),mq=matchMedia('(max-width:1000px)'),on=false,back=null;
+function set(v,restore){
+  if(v===on)return;on=v;
+  h.classList.toggle('menu-open',v);
+  b.setAttribute('aria-expanded',v?'true':'false');
+  if(v){back=d.activeElement;requestAnimationFrame(function(){c.focus()})}
+  else{if(restore&&back)back.focus({preventScroll:true});back=null}
+}
+b.addEventListener('click',function(){set(!on)});
+c.addEventListener('click',function(){set(false,true)});
+n.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a'))set(false)});
+d.addEventListener('keydown',function(e){
+  if(!on)return;
+  if(e.key==='Escape'){set(false,true);return}
+  if(e.key==='Tab'){
+    var f=n.querySelectorAll('button,a[href]'),a=f[0],z=f[f.length-1],x=d.activeElement;
+    if(e.shiftKey&&x===a){e.preventDefault();z.focus()}
+    else if(!e.shiftKey&&x===z){e.preventDefault();a.focus()}
+  }
+});
+function chg(e){if(!e.matches)set(false)}
+if(mq.addEventListener)mq.addEventListener('change',chg);else mq.addListener(chg);
+})();
+</script>
+</body>
+</html>
